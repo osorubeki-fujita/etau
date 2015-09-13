@@ -1,0 +1,36 @@
+%p#notice= notice
+
+%p
+  %b Name ja:
+  = @city.name_ja
+%p
+  %b Name hira:
+  = @city.name_hira
+%p
+  %b Name en:
+  = @city.name_en
+%p
+  %b City category:
+  = @city.city_category_id
+%p
+  %b Latitude:
+  = @city.latitude
+%p
+  %b Longitude:
+  = @city.longitude
+%p
+  %b Url:
+  = @city.url
+%p
+  %b Twitter:
+  = @city.twitter
+%p
+  %b Wikipedia:
+  = @city.wikipedia
+%p
+  %b Population:
+  = @city.population
+
+= link_to 'Edit', edit_city_path(@city)
+\|
+= link_to 'Back', cities_path

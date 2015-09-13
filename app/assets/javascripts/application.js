@@ -9,8 +9,19 @@
 //
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
-//
-//= require jquery
+
+//= require jquery.min
+//= require jquery.turbolinks
 //= require jquery_ujs
+
+//= require twitter/bootstrap
+//= require lodash
+//= require backbone
+//= require jquery-ui
+
+// require jquery.ui.datepicker-ja
 //= require turbolinks
+
+//= require concerns/debugger.js
+//= require init.js
 //= require_tree .

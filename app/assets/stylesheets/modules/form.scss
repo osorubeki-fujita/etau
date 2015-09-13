@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+@import '../theme/color.scss' ;
+
+form {
+  padding: 8px ;
+  input[type="submit"] {
+    border-color: $border_normal_color ;
+  }
+}

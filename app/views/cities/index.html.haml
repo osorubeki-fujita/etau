@@ -1,0 +1,39 @@
+%h1 Listing cities
+
+%table
+  %thead
+    %tr
+      %th Name ja
+      %th Name hira
+      %th Name en
+      %th City category
+      %th Latitude
+      %th Longitude
+      %th Url
+      %th Twitter
+      %th Wikipedia
+      %th Population
+      %th
+      %th
+      %th
+
+  %tbody
+    - @cities.each do |city|
+      %tr
+        %td= city.name_ja
+        %td= city.name_hira
+        %td= city.name_en
+        %td= city.city_category_id
+        %td= city.latitude
+        %td= city.longitude
+        %td= city.url
+        %td= city.twitter
+        %td= city.wikipedia
+        %td= city.population
+        %td= link_to 'Show', city
+        %td= link_to 'Edit', edit_city_path(city)
+        %td= link_to 'Destroy', city, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New City', new_city_path

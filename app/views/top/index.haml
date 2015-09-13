@@ -1,0 +1,19 @@
+= render( 'top_header' )
+= menu_display_button
+
+%ul{ id: 'js-msgs' , class: [ 'msgs' , :row ] }
+
+%div{ class: [ 'rsrv-tbls-and-infos' , :clr ] , id: 'js-rsrv-tbls-and-infos'}
+  %div{ class: [ 'rsrv-tbls' ] , id: 'js-rsrv-tbls' }
+
+    %div{ class: [ 'rsrv-list-tbl-whole-outer' ] }
+      %div{ id: 'js-rsrv-list-tbl-whole' , class: 'rsrv-list-tbl-whole' }
+        - # = render( 'rsrv_list_table_whole' )
+      - # = render( 'rsrv_legends' )
+
+    %div{ id: 'js-rsrv-main-tbl-whole-outer' , class: [ 'rsrv-main-tbl-whole-outer' , :clr ] }
+      %div{ id: 'js-rsrv-main-tbl-whole' , class: [ 'rsrv-main-tbl-whole' , :row , :clr ] }
+        - # = render( 'rsrv_main_table_whole' )
+
+  %div{ class: [ 'rsrv-infos-outer' , :row ] }
+    - # = render( 'rsrv_info_box' )

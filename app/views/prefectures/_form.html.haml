@@ -1,0 +1,40 @@
+= form_for @prefecture do |f|
+  - if @prefecture.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@prefecture.errors.count, "error")} prohibited this prefecture from being saved:"
+      %ul
+        - @prefecture.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :name_ja
+    = f.text_field :name_ja
+  .field
+    = f.label :name_hira
+    = f.text_field :name_hira
+  .field
+    = f.label :name_en
+    = f.text_field :name_en
+  .field
+    = f.label :latitude
+    = f.text_field :latitude
+  .field
+    = f.label :longitude
+    = f.text_field :longitude
+  .field
+    = f.label :population
+    = f.number_field :population
+  .field
+    = f.label :url
+    = f.text_field :url
+  .field
+    = f.label :twitter
+    = f.text_field :twitter
+  .field
+    = f.label :tel
+    = f.text_field :tel
+  .field
+    = f.label :wikipedia
+    = f.text_field :wikipedia
+  .actions
+    = f.submit 'Save'

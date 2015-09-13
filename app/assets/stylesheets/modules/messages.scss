@@ -1,0 +1,30 @@
+@charset "utf-8";
+@import '../mixins.scss' ;
+@import '../theme/color.scss' ;
+
+.msgs {
+  margin-bottom: 0 ;
+  &.has-msg {
+    padding: 8px ;
+    background-color: $msg_bgcolor ;
+  }
+  .msg {
+    @include border_radius( 4px ) ;
+  }
+}
+
+.msg {
+  list-style: none ;
+}
+
+
+.msg--notice {
+  $bgcolor: rgb(220, 236, 196) ;
+  background-color: $bgcolor ;
+  color: darken( $bgcolor , 50% ) ;
+}
+.msg--remark {
+  $bgcolor: rgb(242, 212, 184) ;
+  background-color: $bgcolor ;
+  color: darken( $bgcolor , 50% ) ;
+}

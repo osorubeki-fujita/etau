@@ -1,0 +1,22 @@
+- content_for :header do
+  %div{ class: [ 'header-left' , :title , :col , :span_18] }
+    %div{ class: 'sub-title' }<
+      = "平成27年台風18号被害"
+    %div{ class: 'main-title' }<
+      = "ボランティア受け入れ情報"
+    %div{ class: 'sub-title' }<
+      = "茨城県、栃木県、宮城県"
+
+  %div{ class: [ 'header-left' , :title , :col , :span_6] }
+    %div{ class: :developer }
+      %div{ class: 'developer-name' }<
+        = "By Shu Fujita"
+      %ul{ class: 'sns-accounts' }
+        %li{ class: [ 'sns-account' , :facebook , :text_en ] }
+          = link_to( "" , "http://ja-jp.facebook.com/shu.fujita.u" , target: :_blank )
+          = content_tag( :i , '' , class: [ 'fa' , 'fa-1x' , 'fa-facebook' ] )
+          != "Facebook"
+        %li{ class: [ 'sns-account' , :github , :text_en ] }
+          = link_to( "" , "https://github.com/osorubeki-fujita/etau" , target: :_blank )
+          = content_tag( :i , '' , class: [ 'fa' , 'fa-1x' , 'fa-github' ] )
+          != "GitHub"

@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :prefectures
+  resources :cities
+  resources :volunteers
+  resources :prefectures
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -53,4 +57,7 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  get '/index' , to: 'top#index'
+  root to: 'top#index'
 end

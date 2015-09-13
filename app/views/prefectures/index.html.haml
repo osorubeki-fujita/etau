@@ -1,0 +1,39 @@
+%h1 Listing prefectures
+
+%table
+  %thead
+    %tr
+      %th Name ja
+      %th Name hira
+      %th Name en
+      %th Latitude
+      %th Longitude
+      %th Population
+      %th Url
+      %th Twitter
+      %th Tel
+      %th Wikipedia
+      %th
+      %th
+      %th
+
+  %tbody
+    - @prefectures.each do |prefecture|
+      %tr
+        %td= prefecture.name_ja
+        %td= prefecture.name_hira
+        %td= prefecture.name_en
+        %td= prefecture.latitude
+        %td= prefecture.longitude
+        %td= prefecture.population
+        %td= prefecture.url
+        %td= prefecture.twitter
+        %td= prefecture.tel
+        %td= prefecture.wikipedia
+        %td= link_to 'Show', prefecture
+        %td= link_to 'Edit', edit_prefecture_path(prefecture)
+        %td= link_to 'Destroy', prefecture, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Prefecture', new_prefecture_path

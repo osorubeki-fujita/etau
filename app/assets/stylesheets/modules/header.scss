@@ -1,0 +1,110 @@
+@charset "utf-8";
+
+@import '../mixins.scss' ;
+
+@import '../theme/color.scss' ;
+@import '../theme/font.scss' ;
+
+.header {
+  background-color: $header_bgcolor ;
+  font-size: $font_size_in_header ;
+  padding: 8px ;
+  border: {
+    bottom: 8px solid rgb(158,215,215) ;// mix( $header_bgcolor , #fff , 20% ) ;
+  }
+
+  .main-title {
+    color: $header_text_color ;
+    font-size: 16pt ;
+    font-weight: normal ;
+  }
+  .sub-title {
+    background-color: $header_sub_title_color ;
+    color: $header_text_color ;
+    font-size: 10pt  ;
+    font-weight: normal ;
+  }
+  .title-l {
+    padding: {
+      left: 8px ;
+      top: 4px ;
+      bottom: 4px ;
+    }
+    font-size: 16pt ;
+  }
+  .title-s {
+    padding: {
+      left: 8px ;
+      top: 3px ;
+      bottom: 3px ;
+    }
+    font-size: 12pt ;
+  }
+
+  //---------------- buttons (left, right)
+
+  .btns-outer {
+    float: left ;
+    width: 100% ;
+  }
+
+  .btns {
+    float: left ;
+    .btn {
+      float: left ;
+    }
+  }
+
+  //-------- header_center
+
+  .header__center {
+    margin-left: 0 ;
+    padding: {
+      left: 8px ;
+      right: 8px ;
+    }
+    .header__center__inner {
+      .header__center__content {
+        padding: 8px ;
+        @include border_radius( 8px ) ;
+        background-color: #fff ;
+        float: left ;
+        width: 100% ;
+        .header__center__left {
+          text-align: right;
+        }
+        .header__center__right {
+          padding: {
+            left: 16px ;
+          }
+        }
+      }
+    }
+  }
+
+  //-------- developer
+
+  .developer {
+    color: $header_text_color ;
+    .developer-name {
+      font-size: 8pt ;
+    }
+    .sns-accounts {
+      margin: {
+        bottom: 0 ;
+      }
+      .sns-account {
+        font-size: 7pt ;
+        list-style: none ;
+        @extend %linkInDiv ;
+        i {
+          width: 18px ;
+        }
+        a:hover {
+          background-color: rgba( #fff, 0.2 ) ;
+        }
+      }
+    }
+
+  }
+}

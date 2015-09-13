@@ -1,0 +1,131 @@
+@charset "utf-8";
+
+@import '../mixins.scss' ;
+@import '../theme/color.scss' ;
+@import '../theme/font.scss' ;
+
+
+.datepicker-calendar {
+  // height: 200px ;
+
+  //==== ui-datepicker 属性をもつ領域 - ここから
+
+  .ui-datepicker {
+    width: 100% !important ;
+    padding: 0 ;
+  }
+  .ui-datepicker-inline {
+    border: none ;
+    @include border_radius( 0px ) ;
+  }
+  // ui-widget
+  // ui-widget-content
+  // ui-helper-clearfix
+  // ui-corner-all
+  // ui-datepicker-multi
+  // ui-datepicker-multi-3
+
+  //==== ui-datepicker 属性をもつ領域 - ここまで
+
+  .ui-datepicker-group {
+
+    //==== ui-datepicker-header 属性をもつ領域 - ここから
+
+    .ui-datepicker-header {
+      padding: {
+        // top: 2px ;
+        // bottom: 2px ;
+        top: 0 ;
+        bottom: 0 ;
+      }
+      font: {
+        weight: normal ;
+        size: 8pt ;
+      }
+      .ui-datepicker-title {
+        height: 24px ;
+      }
+    }
+    //==== ui-datepicker-header 属性をもつ領域 - ここまで
+
+    .ui-datepicker-calendar {
+      margin: {
+        top: 0 ;
+        bottom: 0 ;
+        left: 8px ;
+        right: 8px ;
+      }
+      width: 96% ;
+      thead {
+        font-size: $font_size_in_datepicker ;
+        tr {
+          th {
+            padding: {
+              top: 4px ;
+              bottom: 4px ;
+              left: 0 ;
+              right: 0 ;
+            }
+            &:nth-child(1) { // Sunday
+              color: $sunday_color ;
+            }
+            &:nth-child(7) { // Saturday
+              color: $saturday_color ;
+            }
+          }
+        }
+      }
+      tbody {
+        font-size: $font_size_in_datepicker ;
+        td {
+          line-height: 1 ;
+        }
+        td > a {
+          text-align: center ;
+          padding: {
+            left: 0 ;
+            right: 0 ;
+            top: 2px ;
+            bottom: 2px ;
+          }
+        }
+      }
+
+      //---- active
+
+      .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
+        border: 1px solid $active_day_border_color ;
+      }
+
+      //---- highlight (current)
+
+      .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+        border: 1px solid $current_day_border_color !important ;
+      }
+
+      //---- wday
+
+      .ui-state-default {
+        font-size: $font_size_in_datepicker - 1pt ;
+      }
+
+      .date-weekday .ui-state-default {
+        background-image: none;
+        background-color: $weekday_bgcolor ;
+      }
+      .date-saturday .ui-state-default {
+        background-image: none;
+        background-color: $saturday_bgcolor ;
+      }
+      .date-sunday .ui-state-default {
+        background-image: none;
+        background-color: $sunday_bgcolor ;
+      }
+      .date-holiday .ui-state-default {
+        background-image: none;
+        background-color: $holiday_bgcolor ;
+      }
+    }
+
+  }
+}

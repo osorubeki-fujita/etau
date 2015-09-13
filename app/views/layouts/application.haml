@@ -1,0 +1,16 @@
+!!! 5
+%html{:lang => "ja"}
+  %head
+    %title<
+      = "ボランティア受け入れ情報 | 平成27年台風18号"
+    %meta{ :charset => 'utf-8' }
+    = stylesheet_link_tag( 'application', media: 'all' , 'data-turbolinks-track' => true )
+    = javascript_include_tag( 'application' )
+    = csrf_meta_tags
+  %body{ class: [ controller.controller_name.dasherize  + '-ctrl' , 'menu-is-hidden' ] }
+    = render( 'master/header' )
+    %div{ class: [ :main , :row , :clr ] }
+      = render( 'master/menu' )
+      %div{ class: :main__content__outer }
+        %div{ class: :main__content }
+          = yield

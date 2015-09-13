@@ -1,0 +1,28 @@
+= form_for @volunteer do |f|
+  - if @volunteer.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@volunteer.errors.count, "error")} prohibited this volunteer from being saved:"
+      %ul
+        - @volunteer.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :city_id
+    = f.number_field :city_id
+  .field
+    = f.label :date
+    = f.text_field :date
+  .field
+    = f.label :time
+    = f.text_field :time
+  .field
+    = f.label :belongings
+    = f.text_area :belongings
+  .field
+    = f.label :note
+    = f.text_area :note
+  .field
+    = f.label :contact_id
+    = f.text_field :contact_id
+  .actions
+    = f.submit 'Save'

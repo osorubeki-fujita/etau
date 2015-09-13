@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+@import '../mixins.scss' ;
+@import '../theme/font.scss' ;
+
+.btn {
+  padding: 4px ;
+  margin: {
+    left: 8px ;
+  }
+  &:first-child {
+    margin: 0 ;
+  }
+  @include border_radius( 4px ) ;
+  .btn__icon-outer {
+    .fa-1x {
+      min-width: 12px ;
+      min-height: 12px ;
+    }
+  }
+  .btn__title {
+    font-size: $font_size_of_btn_title ;
+  }
+}
+
+.link-btn {
+  cursor: pointer ;
+  @extend %linkInDiv ;
+  @include border_radius( 4px ) ;
+  border:1px solid $border_normal_color ;
+}
+
+.btn-h {
+  float: left ;
+  .btn__icon-outer {
+    float: left ;
+    margin-right: 4px ;
+  }
+  .btn__title {
+    float: left ;
+  }
+}
+
+.btn-v {
+  .btn__icon-outer {
+    text-align: center ;
+    margin-bottom: 4px ;
+  }
+}

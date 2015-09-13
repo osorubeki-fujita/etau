@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b City:
+  = @volunteer.city_id
+%p
+  %b Date:
+  = @volunteer.date
+%p
+  %b Time:
+  = @volunteer.time
+%p
+  %b Belongings:
+  = @volunteer.belongings
+%p
+  %b Note:
+  = @volunteer.note
+%p
+  %b Contact:
+  = @volunteer.contact_id
+
+= link_to 'Edit', edit_volunteer_path(@volunteer)
+\|
+= link_to 'Back', volunteers_path

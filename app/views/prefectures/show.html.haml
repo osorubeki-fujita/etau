@@ -1,0 +1,36 @@
+%p#notice= notice
+
+%p
+  %b Name ja:
+  = @prefecture.name_ja
+%p
+  %b Name hira:
+  = @prefecture.name_hira
+%p
+  %b Name en:
+  = @prefecture.name_en
+%p
+  %b Latitude:
+  = @prefecture.latitude
+%p
+  %b Longitude:
+  = @prefecture.longitude
+%p
+  %b Population:
+  = @prefecture.population
+%p
+  %b Url:
+  = @prefecture.url
+%p
+  %b Twitter:
+  = @prefecture.twitter
+%p
+  %b Tel:
+  = @prefecture.tel
+%p
+  %b Wikipedia:
+  = @prefecture.wikipedia
+
+= link_to 'Edit', edit_prefecture_path(@prefecture)
+\|
+= link_to 'Back', prefectures_path

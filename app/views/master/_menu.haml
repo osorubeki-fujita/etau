@@ -1,0 +1,41 @@
+%div{ class:  :menu , id: 'js-menu' }
+  %ul{ class: 'menu-categories' }
+    %li{ class: [ 'menu-category' , :rsrv , :link ] }
+      = link_to( '' , url_for( controller: :top , action: :index ) )
+    %li{ class: [ 'menu-category' , :rsrv ] }
+      %div{ class: :title }<
+        = "ボランティア"
+      %ul{ class: [ 'links', :clr ] }
+        :ruby
+          ary = [
+            [ "受け入れ" , index_path , :table ]
+          ]
+        - ary.each do | text , link_url , icon |
+          - li_classes = [ :link ]
+          - if current_page?( link_url )
+            - li_classes << :current
+          %li{ class: li_classes }<
+            = link_to( '' , link_url )
+            %div{ class: [ 'link__inner' , :clr ] }
+              = content_tag( :i , '' , class: [ :fa , 'fa-1x' , 'fa-' + icon.to_s.dasherize ] )
+              %div{ class: :text }<
+                = text
+
+    - # 管理者のみ表示
+    %li{ class: [ 'menu-category' , :admin ] }
+      %div{ class: :title }<
+        = "管理"
+      %ul{ class: [ 'links', :clr ] }
+        :ruby
+          ary = [
+            [ "都道府県" , prefectures_path ] ,
+            [ "市区町村" , cities_path ]
+          ]
+        - ary.each do | text , link_url |
+          %li{ class: :link }<
+            - if link_url.present?
+              = link_to_unless_current( '' , link_url )
+            = text
+
+  %div{ class: [ 'menu-fix-btn-outer' , :clr ] }
+    = menu_fix_button

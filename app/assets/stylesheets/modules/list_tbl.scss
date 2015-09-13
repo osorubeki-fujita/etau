@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+@import '../theme/color.scss' ;
+
+.list-tbl-outer {
+  width: 100% ;
+  overflow-x: auto ;
+}
+
+.list-tbl {
+  th,td {
+    padding: 4px ;
+    border: 1px solid $border_normal_color ;
+    white-space: nowrap ;
+  }
+  th {
+    background-color: $thead_bgcolor ;
+  }
+  .info-in-list {
+    .btns-outer {
+      .btns {
+        width: 160px ;
+      }
+    }
+  }
+  margin-bottom: 16px ;
+  font-size: 9pt ;
+}

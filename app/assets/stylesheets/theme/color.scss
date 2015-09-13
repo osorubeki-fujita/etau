@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+$body_bgcolor: rgb(252, 252, 252) ;
+
+//-------- header
+$header_bgcolor: rgb(23, 56, 77) ;
+$header_sub_title_color: $header_bgcolor ;
+$header_text_color: #fff ;
+
+//-------- border
+$border_normal_color: #999 ;
+
+//-------- link
+$link_default_color: #fff ; // #f6f6f6 ;
+$link_hover_color: rgba( $header_bgcolor , 10% ) ;
+
+//-------- 表（各種共通）
+
+// $thead_bgcolor: rgb(175, 238, 238) ;
+$thead_bgcolor: rgba( $header_bgcolor , 0.1 ) ;
+$first_td_in_thead_bgcolor: rgb(204, 204, 204) ;
+
+//-------- 日付
+
+$saturday_color: rgb(0, 191, 255) ;
+$sunday_color: rgb(240, 128, 128) ;
+$holiday_color: rgb(255, 182, 193) ;
+
+$weekday_bgcolor: rgb(246, 246, 246) ;
+$saturday_bgcolor: rgb(240, 255, 255) ;
+$sunday_bgcolor: rgb(251, 232, 235) ;
+$holiday_bgcolor: rgb(251, 242, 222) ;
+
+$active_day_border_color: rgb(75, 43, 0) ;
+$current_day_border_color: rgb(255, 146, 0) ;
+
+//-------- message
+
+$msg_bgcolor: rgb(255, 236, 233) ;
+
+$color_for_cancellation_1: rgba(255, 0, 0, 0.5) ;
+$color_for_cancellation_2: rgba(255, 0, 0, 0.2) ;
+$color_for_creation: rgba(0, 255, 125, 0.3) ;
